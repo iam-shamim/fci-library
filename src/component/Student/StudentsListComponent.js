@@ -27,8 +27,9 @@ class BooksListComponent extends Component{
         document.title = "Student List";
         const param = qs.parse(this.props.location.search);
         param.page = param.page?param.page:1;
+        this.setState({dataLoading: true});
         if(this.props.studentList.docs.length===0){
-            this.setState({dataLoading: true});
+            //this.setState({dataLoading: true});
         }
         this.props.getStudent(param).then(()=>{
             this.setState({dataLoading: false})

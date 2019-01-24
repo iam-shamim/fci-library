@@ -61,11 +61,11 @@ class AddBooksComponent extends Component{
         this.props.history.push("/books/list?language="+e);
     };
     handlePageChange = (props)=>{
-        this.setState({isStudentListLoading: true});
+        this.setState({isBookListLoading: true});
         this.props.bookStudents(this.props.match.params.id,props).then(res=>{
-            this.setState({isStudentListLoading: false});
+            this.setState({isBookListLoading: false});
         }).catch(()=>{
-            this.setState({isStudentListLoading: false});
+            this.setState({isBookListLoading: false});
         });
     };
     bookReturn = (_id)=>{
@@ -107,13 +107,13 @@ class AddBooksComponent extends Component{
         if(prevProps.retry_book_student > this.state.retry_book_student){
             this.setState({
                 retry_book_student: prevProps.retry_book_student,
-                isStudentListLoading: true
+                isBookListLoading: true
             });
             const newPage = this.props.studentList.page===1?1: (this.props.studentList.page - 1);
             this.props.bookStudents(this.props.match.params.id,newPage).then(res=>{
-                this.setState({isStudentListLoading: false});
+                this.setState({isBookListLoading: false});
             }).catch(()=>{
-                this.setState({isStudentListLoading: false});
+                this.setState({isBookListLoading: false});
             });
         }
     }
