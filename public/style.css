@@ -1,0 +1,73 @@
+.highlight {padding: 9px 14px;margin-bottom: 14px;background-color: #F7F7F9;border: 1px solid #E1E1E8;border-radius: 4px;}
+.input-error{border-color: #843534;}
+
+
+.jumbotronLogin{background:#C8C8C8;opacity:0.7;margin-top:20%;color:#000000}
+.containerPadd{padding-top:80px;}
+.addEmployeeInDiv input{margin-bottom:15px}
+
+.bookAddCat input[type="checkbox"]{display: none;}
+.bookAddCat input[type="checkbox"]:checked + label .btn{background:#008749;color:#FFF;}
+table .edit, table .btn{padding-top:3px;padding-bottom:3px}
+
+.parentList span{margin: 0px 5px;  color: #989898;}
+.btnPad{padding: 4px 10px;}
+.readonlyNoStyle [readonly]{background:#FFF !important;}
+hr{border-color:#D5D5D5;}
+
+#studentImg{display:none;}
+[for="studentImg"]{padding: 30px 43%;background: #DCDCDC;}
+
+#employeeImg{display:none;}
+[for="employeeImg"]{padding: 30px 43%;background: #DCDCDC;}
+
+.passNotMatchMsg{display:none;}
+.fa-1-2x{font-size: 1.2em;}
+
+input[type="checkbox"].styleInput  {
+    display:none;
+}
+input[type="checkbox"].styleInput  + label span:first-child {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-4px 4px 0 0;
+    vertical-align:middle;
+    background:url(img/icon/check_radio_sheet.png) left top no-repeat;
+    cursor:pointer;
+}
+input[type="checkbox"]:checked.styleInput + label span:first-child {
+    background:url(img/icon/check_radio_sheet.png) -19px top no-repeat;
+}
+
+input[type="radio"].styleInput  {
+    display:none;
+}
+input[type="radio"].styleInput  + label{cursor: pointer}
+input[type="radio"].styleInput  + label span:first-child {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-4px 4px 0 0;
+    vertical-align:middle;
+    background:url(img/icon/check_radio_sheet.png) -38px top no-repeat;
+    cursor:pointer;
+}
+input[type="radio"]:checked.styleInput + label span:first-child {
+    background:url(img/icon/check_radio_sheet.png) -57px top no-repeat;
+}
+
+
+
+.enable{color:green;}
+.disable{color:orange;}
+.active-profile a{color:#398110}
+.active-profile:before{content:'';height:25px;width:3px;background: #3c816b;float:left;margin-right:3px;}
+.fileStyleNew{position: relative !important;z-index: 0 !important;}
+.select2-search--dropdown .select2-search__field {  padding:0px 4px !important;}
+
+
+
+
+
+
