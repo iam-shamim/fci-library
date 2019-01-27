@@ -30,9 +30,14 @@ export default (state = initialState, action = {}) => {
             };
         case STUDENT_BOOK_DELETED:
             state.bookList.total--;
-            state.bookList.pages = Math.ceil(state.bookList.total/state.bookList.limit);
-            state.bookList.pages = state.bookList.pages<1?1:state.bookList.pages;
-            state.retry_book_student = state.bookList.docs.length === 1? ( state.retry_book_student + 1 ): state.retry_book_student;
+            if(state.bookList.docs.length === 1){
+                state.retry_book_student++;
+                const newPages = Math.ceil(state.bookList.total/state.bookList.limit);
+                state.bookList.pages = newPages<1?1:newPages;
+            }
+            // state.bookList.pages = Math.ceil(state.bookList.total/state.bookList.limit);
+            // state.bookList.pages = state.bookList.pages<1?1:state.bookList.pages;
+            // state.retry_book_student = state.bookList.docs.length === 1? ( state.retry_book_student + 1 ): state.retry_book_student;
             return{
                 ...state,
                 bookList: {

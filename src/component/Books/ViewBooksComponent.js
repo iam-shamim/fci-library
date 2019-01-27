@@ -24,7 +24,6 @@ class AddBooksComponent extends Component{
         errors: {},
         isLoading: false,
         isStudentListLoading: null,
-        isBookListLoading: false,
         book_return_info:{
             modal: false,
             title: null,
@@ -120,6 +119,14 @@ class AddBooksComponent extends Component{
 
 
     finding_student = (e)=>{
+        const finding_student_id = this.state.finding_student.finding_student_id;
+        this.setState({
+            finding_student:{
+                ...default_finding_student,
+                finding_student_id: finding_student_id,
+                loading: true
+            },
+        });
         server.get(('/api/students/'+this.state.finding_student.finding_student_id+'/reg'),{
             params:{
                 book_id: this.state.give_to
@@ -228,7 +235,7 @@ class AddBooksComponent extends Component{
         }
 
         let studentList = null;
-        if(this.state.isBookListLoading){
+        if(this.state.isStudentListLoading){
             studentList = <Spinner/>;
         }else if(this.props.studentList.docs.length === 0){
             studentList = <p className="text-center">Student Not found</p>

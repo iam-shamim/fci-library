@@ -196,6 +196,14 @@ class BooksListComponent extends Component{
         });
     };
     finding_student = (e)=>{
+        const finding_student_id = this.state.finding_student.finding_student_id;
+        this.setState({
+            finding_student:{
+                ...default_finding_student,
+                finding_student_id: finding_student_id,
+                loading: true
+            },
+        });
         server.get(('/api/students/'+this.state.finding_student.finding_student_id+'/reg'),{
             params:{
                 book_id: this.state.give_to
